@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install # if using any build tools, else skip
+  build:
+    commands:
+      - echo Building project...
+      - echo "No build step needed for static HTML & CSS"
+  post_build:
+    commands:
+      - echo Build completed
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist' # or specify your output folder if any
